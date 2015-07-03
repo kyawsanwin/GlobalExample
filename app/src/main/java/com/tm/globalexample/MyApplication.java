@@ -15,7 +15,7 @@ public class MyApplication extends Application {
         context = this;
     }
 
-    public Typeface getTypeface(Context context) {
+    public Typeface getTypeface() {
         Typeface typeface = Typeface.createFromAsset(context.getAssets(),
                 "fonts/latobold.ttf");
         return typeface;

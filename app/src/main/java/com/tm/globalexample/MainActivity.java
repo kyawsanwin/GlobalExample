@@ -1,17 +1,27 @@
 package com.tm.globalexample;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
+
+    TextView tvTypeface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tvTypeface = (TextView) findViewById(R.id.tvTypeface);
+
+        MyApplication app = (MyApplication)getApplicationContext();
+        tvTypeface.setTypeface(app.getTypeface());
+
     }
 
     @Override
